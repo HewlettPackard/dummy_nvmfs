@@ -37,7 +37,7 @@ Otherwise, please do not try this by yourself. PLEASE.
 
 * Download upstream linux kernel code from https://www.kernel.org/.
 Either latest, or the exact same version as your current kernel.
-Say you deflated it to /tmp/linux-x.x.x/
+Say you inflated it to /tmp/linux-x.x.x/
 * Copy this folder as /tmp/linux-x.x.x/fs/nvmfs
 * Add the following line to /tmp/linux-x.x.x/fs/Makefile
 
@@ -59,6 +59,11 @@ You can specify the following parameters when you mount the dummy fs.
 * rd_delay_ns_per_kb
 * wr_delay_ns_per_kb
 * cpu_freq_mhz
+
+For example,
+
+    sudo mount -t nvmfs -o rd_delay_ns_fixed=500,wr_delay_ns_fixed=500,rd_delay_ns_per_kb=0,wr_delay_ns_per_kb=0,cpu_freq_mhz=2800,size=1000000m nvmfs /testnvm
+
 
 Hopefully the parameter names are self-explanatory.
 Just one clarification, the delay is injected via x86 RDTSC, so it needs to know

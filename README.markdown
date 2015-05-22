@@ -43,6 +43,10 @@ Say you deflated it to /tmp/linux-x.x.x/
 
     obj-y += nvmfs/
 
+* Compile and deploy the kernel. Make sure you enable NUMA and
+other esssential things. We also put sample_kernel.config in this folder
+*as a reference*. You should figure out the right configuration
+for your machine yourself.
 * After building and installing the new kernel you should be able to
 mount/umount nvmfs filesystems.
 

@@ -36,7 +36,8 @@ I assume you have done linux kernel compilation yourself before.
 Otherwise, please do not try this by yourself. PLEASE.
 
 * Download upstream linux kernel code from https://www.kernel.org/.
-Either latest, or the exact same version as your current kernel.
+**We recommend [3.16.7](https://www.kernel.org/pub/linux/kernel/v3.x/linux-3.16.7.tar.gz)**.
+Due to API changes in linux, we observed a compilation error in 3.18.
 Say you inflated it to /tmp/linux-x.x.x/
 * Copy this folder as /tmp/linux-x.x.x/fs/nvmfs
 * Add the following line to /tmp/linux-x.x.x/fs/Makefile
